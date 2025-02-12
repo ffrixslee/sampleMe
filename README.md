@@ -36,6 +36,7 @@ On Mac/Linux:
 ```
 django-admin startproject mysite 
 ```
+> `mysite` is the name of my project
 
 ## 4. Testing Setup
 ```
@@ -47,6 +48,7 @@ python manage.py runserver
 ```
 python manage.py startapp logOn 
 ```
+> `logon` is the name of my Django app
 
 ## 1. Set up Django Authentication
 > Create a Superuser for Testing
@@ -74,17 +76,17 @@ python manage.py createsuperuser
 ```
 python manage.py startapp logOn 
 ```
-> To create a Django app
+> To create a Django app:
 
-> cd into the app and create a `template` folder and cd into it
+1. cd into the app and create a `template` folder and cd into it
 
-> create a `login.html` in templates folder
+2. create a `login.html` in templates folder
 
-> create a `urls.py` in one folder up
+3. create a `urls.py` in one folder up
 
-
+-------
 Issues encountered:
-- The issue: In Django 5, LogoutView has been depreciated. So, we need to create our view like this:
+- The issue: In Django 5, LogoutView has been **depreciated**. So, we need to create our view like this:
 ``` python
 @login_required
 def user_logout(request):
@@ -95,7 +97,7 @@ In logged_out.html, write the below code.
 {% block title %}Logged out{% endblock %}
 {% block content %}
 ```
-source: https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-logout/26044/8
+source: [ https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-logout/26044/8 ]
 
 -------
 **Important files to take note of:**
@@ -105,3 +107,6 @@ source: https://forum.djangoproject.com/t/showing-method-not-allowed-get-users-l
 - settings.py
 
 --------
+
+## Styles
+- Originally created a `styles.css` file in `statics/css` folder but opted to use tailwind + flowbite instead
