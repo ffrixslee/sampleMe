@@ -3,6 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('accounts/', include('django.contrib.auth.urls')),  # Django auth URLs for login/logout
-    path("", include("logOn.urls")),  # Add your app's URL
+    path("", include("logOn.urls")),  # Add your app's URL to connect the app and the project
 ]

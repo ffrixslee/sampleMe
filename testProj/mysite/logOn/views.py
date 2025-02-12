@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
+def home_view(request):
+    return render(request, "home.html")
+
 def login_view(request):
     if request.method == "POST":
         username = request.POST["username"]
@@ -15,9 +18,6 @@ def login_view(request):
             messages.error(request, "Invalid username or password.")
     
     return render(request, "login.html", {'form': AuthenticationForm()})
-
-def home_view(request):
-    return render(request, "home.html")
 
 # @login_required
 def logout_view(request):
