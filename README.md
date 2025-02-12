@@ -45,11 +45,6 @@ python manage.py runserver
 
 # Django-specific
 
-```
-python manage.py startapp logOn 
-```
-> `logon` is the name of my Django app
-
 ## 1. Set up Django Authentication
 > Create a Superuser for Testing
 
@@ -76,13 +71,15 @@ python manage.py createsuperuser
 ```
 python manage.py startapp logOn 
 ```
+> `logon` is the name of my Django app
+
 > To create a Django app:
 
-1. cd into the app and create a `template` folder and cd into it
+1. cd into `logon` app folder and create a `urls.py`
 
-2. create a `login.html` in templates folder
-
-3. create a `urls.py` in one folder up
+2. create a `templates` folder and cd into it
+    
+    1. create a `login.html` file
 
 -------
 Issues encountered:
