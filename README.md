@@ -43,9 +43,7 @@ django-admin startproject mysite
 python manage.py runserver
 ```
 
-# Django-specific
-
-## 1. Set up Django Authentication
+## 5. Set up Django Authentication
 > Create a Superuser for Testing
 
 *(IMPORTANT)*
@@ -81,6 +79,7 @@ python manage.py startapp logOn
     
     1. create a `login.html` file
 
+- app name should be `site_main` instead of `logon`
 -------
 Issues encountered:
 - The issue: In Django 5, LogoutView has been **depreciated**. So, we need to create our view like this:
@@ -107,3 +106,28 @@ source: [ https://forum.djangoproject.com/t/showing-method-not-allowed-get-users
 
 ## Styles
 - Originally created a `styles.css` file in `statics/css` folder but opted to use tailwind + flowbite instead
+
+--------
+## Miscellaneous
+- db.sqlite3 should not be pushed and synchronized
+- when working on repo from diff computers, must migrate and create superusers:
+```
+python manage.py migrate
+python manage.py createsuperuser
+```
+- don't need testProj folder, just directly create app mysite in root folder
+- can specify versions to be used in Pipfile
+- .env, .env.dist files important for setting django environment variables
+- admin.py is where the model files with database schema are stored
+
+--------
+
+#### Windows pc
+- For windows pc: use git bash terminal instead of command prompt
+- In settings.py: change Time_Zone='Asia/Singapore'
+
+    - If there's an issue with setting timezone, install tzdata:
+    
+        `pip install tzdata`
+
+

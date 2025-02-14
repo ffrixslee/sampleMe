@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout as auth_logout # to avoid conflict in naming convention
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -21,5 +21,5 @@ def login_view(request):
 
 # @login_required
 def logout_view(request):
-    logout(request)
+    auth_logout(request)
     return render(request, "logout.html", {})
