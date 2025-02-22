@@ -120,6 +120,12 @@ python manage.py createsuperuser
 - .env, .env.dist files important for setting django environment variables
 - admin.py is where the model files with database schema are stored
 
+To uninstall Python:
+- sudo rm -rf `<path to Python>`
+- Use homebrew to install packages from now on (pipenv, pyenv)
+- Must activate virtual shell (pipenv shell) in order to use pip!
+- delete pipfile.lock before running server
+
 --------
 
 #### Windows pc
